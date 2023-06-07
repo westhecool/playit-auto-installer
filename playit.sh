@@ -12,6 +12,10 @@ if [[ "$(id -u)" != "0" ]]; then
     echo -e "$RED Exiting... $ENDCOLOR"
     exit 1
 fi
+if [[ ! -t 0 ]]; then
+    echo -e "$RED This script can't be run from stdin $ENDCOLOR"
+    exit 1
+fi
 if [[ $(apt) ]]; then
     echo -e "$GREEN Using apt $ENDCOLOR"
     curl -SsL https://playit-cloud.github.io/ppa/key.gpg | apt-key add -

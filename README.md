@@ -6,5 +6,5 @@ This should work on most Linux systems. (Such as a raspberry pi.)
 # Usage
 Make sure you're running as root by running `sudo -s` then run this to start the install:
 ```sh
-curl -SsL https://raw.githubusercontent.com/westhecool/playit-auto-installer/main/playit.sh | bash
+bash <(curl -SsL https://raw.githubusercontent.com/westhecool/playit-auto-installer/main/playit.sh)
 ```

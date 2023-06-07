@@ -1,0 +1,1 @@
+# playit-auto-installer

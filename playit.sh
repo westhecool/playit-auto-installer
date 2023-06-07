@@ -43,7 +43,7 @@ trap dontexit SIGINT
 playit &
 PID=$!
 wait $PID
-reset
+echo -e "\033c"
 echo "Installing playit service"
 cat <<EOF > /etc/systemd/system/playit.service
 [Unit]

@@ -9,6 +9,8 @@ get_latest_release() {
 }
 if [[ "$(id -u)" != "0" ]]; then
     echo -e "$RED This script must be run as root $ENDCOLOR"
+    echo -e "$RED Try: curl -SsL https://raw.githubusercontent.com/westhecool/playit-auto-installer/main/playit.sh | sudo -E bash $ENDCOLOR"
+    echo -e "$RED Exiting... $ENDCOLOR"
     exit 1
 fi
 if [[ $(apt) ]]; then
@@ -33,7 +35,7 @@ else
     chmod +x /usr/local/bin/playit
 fi
 dontexit() {
-    echo > /dev/null
+    echo
 }
 echo -e "$GREEN You will now need to register the playit agent $ENDCOLOR"
 echo -e "$GREEN Press ctrl+c when you are done (You may need to press ctrl+c twice) $ENDCOLOR"

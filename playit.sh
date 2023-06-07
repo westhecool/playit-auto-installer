@@ -9,7 +9,6 @@ get_latest_release() {
 }
 if [[ "$(id -u)" != "0" ]]; then
     echo -e "$RED This script must be run as root $ENDCOLOR"
-    echo -e "$RED Try: curl -SsL https://raw.githubusercontent.com/westhecool/playit-auto-installer/main/playit.sh | sudo -E bash $ENDCOLOR"
     echo -e "$RED Exiting... $ENDCOLOR"
     exit 1
 fi
